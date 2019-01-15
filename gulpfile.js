@@ -8,18 +8,19 @@ const path = require('path');
 const wdioCli = require('@wdio/cli');
 let wdio = new wdioCli.default(path.join(__dirname, 'wdio.conf.js'), {});
 
-gulp.task('http:start', fnStartHttp);
-gulp.task('http:stop', fnStopHttp);
+// gulp.task('http:start', fnStartHttp);
+// gulp.task('http:stop', fnStopHttp);
 
 gulp.task('e2e:start', e2eStart);
 gulp.task('e2e:end', e2eEnd);
 gulp.task('e2e:test', gulp.series(['e2e:start', 'e2e:end']));
 
-gulp.task('minimize:js', js);
-gulp.task('minimize:all', gulp.parallel('minimize:js'));
+// gulp.task('minimize:js', js);
+// gulp.task('minimize:all', gulp.parallel('minimize:js'));
 
 // Full task
-gulp.task('default', gulp.series(['http:start', 'e2e:start', 'minimize:all', 'http:stop', 'e2e:end']));
+// gulp.task('default', gulp.series(['http:start', 'e2e:start', 'minimize:all', 'http:stop', 'e2e:end']));
+gulp.task('default', gulp.series(['e2e:start', 'e2e:end']));
 
 //
 // Test
@@ -39,6 +40,7 @@ function e2eEnd(done) {
     process.exit(0);
 }
 
+/*
 //
 // minimize functions
 //
@@ -71,3 +73,4 @@ function fnStopHttp(done) {
     setTimeout(() => httpServer.close(), 500);
     done();
 }
+*/

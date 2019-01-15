@@ -5,7 +5,14 @@ const {
 
 describe('lsDevince', () => {
     it('Test 01:', () => {
-        // lsDevices((res) => console.log('Response: ', res));
+        lsDevices()
+            .then((r) => {
+                // assert.equal(0, 1);
+            })
+            .catch((err) => {
+                // assert.equal(0, 1);
+            });
+
         assert.equal(1, 1);
     });
 });

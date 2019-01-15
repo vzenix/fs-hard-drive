@@ -1,17 +1,21 @@
 //
 const os = require('os');
 
-exports.CMDformatResponseSpaces = CMDformatResponseSpaces;
+exports.CMDFormatResponseSpaces = CMDFormatResponseSpaces;
 
-function CMDformatResponseSpaces(stdout) {
+/**
+ * Format a traditional response of shell cmd with headers
+ * @param {*} stdout 
+ */
+function CMDFormatResponseSpaces(stdout) {
     let result = stdout.split(os.EOL);
-    let infos = CMDformatResponseSpacesCalculateInfo(result[0].trim());
+    let infos = CMDFormatResponseSpacesCalculateInfo(result[0].trim());
     let ret = new Array();
 
     for (let i = 1; i < result.length; i++) {
         let lnRaw = result[i].trim();
-        let lnInfo = {};
 
+        let lnInfo = {};
         for (let j = 0; j < infos.length; j++) {
             lnInfo[infos[j].title] = {
                 title: infos[j].title,
@@ -25,7 +29,11 @@ function CMDformatResponseSpaces(stdout) {
     return ret;
 }
 
-function CMDformatResponseSpacesCalculateInfo(ln) {
+/**
+ * Helper of CMDFormatResponseSpaces
+ * @param {*} ln 
+ */
+function CMDFormatResponseSpacesCalculateInfo(ln) {
     let chars = ln.split('');
     let current = {
         title: '',
