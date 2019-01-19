@@ -1,6 +1,6 @@
 # NodeJS library "fs-hard-drive"
 
-Hard drive functions not incluyed in fs package
+Hard drive functions not incluyed in "fs" package
 
 # Functionalities
 
