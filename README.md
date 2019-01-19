@@ -23,4 +23,4 @@ Run `npm test` or `gulp e2e:test`
 
 # Author
 
-* [Webpage (only spanish):](https://vzenix.es) 
+* [Webpage (only spanish)](https://vzenix.es) 
