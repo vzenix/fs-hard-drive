@@ -1,19 +1,10 @@
-const os = require('os');
-const {
-    DriveType,
-    lsDevices
-} = require('./ls-devices');
-// const scanFolder = require('./scan-folder').scanFolder;
-
 // List devices
-exports.DriveType = DriveType;
-exports.lsDevices = lsDevices;
+exports.DriveType = require('./ls-devices').DriveType;
+exports.lsDevices = require('./ls-devices').lsDevices;
 
 // Scan folders
-// exports.scanFolder = scanFolder;
+exports.scanFolders = require('./scan-folders').scanFolders;
+exports.scanFoldersInfo = require('./scan-folders').scanFoldersInfo;
 
-// scanFolder("E:\\ad\\wamp");
-
-lsDevices()
-    .then((r) => console.log('response: ', JSON.stringify(r)))
-    .catch((err) => console.log('err: ', err));
+// Utils
+exports.Utils = require('./utils').Utils;

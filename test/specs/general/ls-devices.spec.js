@@ -3,16 +3,16 @@ const {
     lsDevices
 } = require('../../../src/index');
 
-describe('lsDevince', () => {
-    it('Test 01:', () => {
-        lsDevices()
-            .then((r) => {
-                // assert.equal(0, 1);
+describe('lsDevice', () => {
+    it('Test function for list hard disk devices:', () => {
+        return lsDevices()
+            .then(function (value) {
+                assert.equal(Array.isArray(value), true, 'Invalid format returned, It Didn\'t returned an array');
+                assert.notEqual(value.length, 0, 'No hard disk devices detected');
             })
             .catch((err) => {
-                // assert.equal(0, 1);
+                console.err(err);
+                assert.equal(0, 1, 'Fatal error on method "lsDevices"');
             });
-
-        assert.equal(1, 1);
     });
 });

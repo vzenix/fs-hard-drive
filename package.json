@@ -2,10 +2,12 @@
   "name": "fs-hard-drive",
   "version": "1.0.0",
   "description": "Hard drive functions not incluyed in fs package",
+  "homepage": "https://github.com/vzenix/fs-hard-drive/wiki",
+  "author": "Francisco M. E. <paco@vzenix.es>",
+  "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "test": "gulp e2e:test",
-    "run": "node src/index.js"
+    "test": "gulp e2e:test"
   },
   "repository": {
     "type": "git",
@@ -17,14 +19,13 @@
     "free",
     "space",
     "volumes",
-    "harddisk"
+    "harddisk",
+    "library",
+    "module"
   ],
-  "author": "Francisco M. E. <paco@vzenix.es>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/vzenix/fs-hard-drive/issues"
   },
-  "homepage": "https://github.com/vzenix/fs-hard-drive#readme",
   "devDependencies": {
     "@wdio/cli": "^5.3.0",
     "@wdio/dot-reporter": "^5.2.3",
