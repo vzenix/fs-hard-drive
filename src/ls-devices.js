@@ -22,7 +22,7 @@ if (isWindows) {
     exports.lsDevices = lsDevices;
 } else {
     exports.lsDevices = () => {
-        new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             reject({
                 error: `OS ${os.type()} not supported`,
                 stderr: null
