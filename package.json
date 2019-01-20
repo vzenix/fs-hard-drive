@@ -1,0 +1,47 @@
+{
+  "name": "fs-hard-drive",
+  "version": "1.0.0",
+  "description": "Hard drive functions not incluyed in fs package",
+  "homepage": "https://github.com/vzenix/fs-hard-drive/wiki",
+  "author": "Francisco M. E. <paco@vzenix.es>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "gulp e2e:test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vzenix/fs-hard-drive.git"
+  },
+  "keywords": [
+    "disk",
+    "disks",
+    "free",
+    "space",
+    "volumes",
+    "harddisk",
+    "library",
+    "module"
+  ],
+  "bugs": {
+    "url": "https://github.com/vzenix/fs-hard-drive/issues"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^5.3.5",
+    "@wdio/dot-reporter": "^5.2.3",
+    "@wdio/local-runner": "^5.3.5",
+    "@wdio/mocha-framework": "^5.3.2",
+    "@wdio/selenium-standalone-service": "^5.2.2",
+    "@wdio/spec-reporter": "^5.2.3",
+    "@wdio/sync": "^5.3.2",
+    "connect": "^3.6.6",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "selenium-standalone": "^6.15.4",
+    "serve-static": "^1.13.2",
+    "webdriverio": "^5.3.5"
+  },
+  "dependencies": {}
+}
